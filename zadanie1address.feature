@@ -12,7 +12,7 @@ Feature: Zadanie 1
     And Phone <Phone>
     And Country
     And Save
-    Then Checked the added address
+    Then Checking if address has been saved
     Examples:
     |Alias |Address     | City    | PostalCode | Phone    |
     |Test1 |Sunrise 2   | London  |02-299      |123654789|

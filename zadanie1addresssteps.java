@@ -85,6 +85,12 @@ public class zadanie1addresssteps {
         WebElement searchSaveButton = driver.findElement(By.xpath("//*[contains(text(),\"Save\")]"));
         searchSaveButton.click();
     }
+    @Then("Checking if address has been saved")
+    public void checkIfAddressWasSave() {
+        String checkAddress= driver.findElement(By.id("notifications")).getText();
+        String Notifications = "Address successfully added!";
+        Assert.assertEquals(Notifications,checkAddress);
+    }
 
 
     }

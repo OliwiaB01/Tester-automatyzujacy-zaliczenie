@@ -41,9 +41,13 @@ public class zadanie2 {
 
         WebElement searchSizeList = driver.findElement(By.id("group_1"));
         searchSizeList.sendKeys("M");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
         WebElement searchQuantity = driver.findElement(By.name("qty"));
-        //searchQuantity.click();
         searchQuantity.clear();
         searchQuantity.sendKeys("5");
 
@@ -78,3 +82,4 @@ public class zadanie2 {
         driver.quit();
     }
 }
+
